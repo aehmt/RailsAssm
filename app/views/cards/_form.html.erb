@@ -1,14 +1,6 @@
 <%= form_for @new_card do |f| %>
 
-  <% if @new_card.errors.any? %>
-      <h2><%= pluralize(@new_card.errors.count, "error") %> prohibited this card from being saved:</h2>
-
-    <ul>
-      <% @new_card.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  <% end %>
+  
 
   <%= f.hidden_field :list_id, value: list.id %>
 
